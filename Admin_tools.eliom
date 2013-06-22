@@ -17,7 +17,7 @@ let template ~depth ~id =
 
 let build roots info g  =
   let visited = ref Core_kernel.Std.Int64.Map.empty in
-  let rec f ~depth v =
+  let rec _f ~depth v =
     if Core_kernel.Std.Int64.Map.mem !visited v then
       template ~depth ~id:v 
     else 
